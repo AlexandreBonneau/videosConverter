@@ -1,7 +1,7 @@
 /**
  *             videosConverter
  *
- * @version    0.1.0
+ * @version    0.1.1
  * @date       2018-08-24
  *
  * @author     Alexandre Bonneau
@@ -34,7 +34,6 @@
  */
 
 const fs            = require('fs');
-const path          = require('path');
 const { spawnSync } = require('child_process');
 
 /* global process */
@@ -94,9 +93,10 @@ filesArray.forEach(fileName => {
         } else {
             // Convert the video file
             conversionCount++;
-            // console.log(`${videoCount}: ffmpeg -i ${fileName} -c:v libx265 -crf ${constantRateFactor} -c:a ${audioCodec} -b:a 128k ${outputDirName}/${targetFilename}`);
             const conversionStartTime = process.hrtime();
-            const ffmpegCmdLine       = spawnSync('ffmpeg', ['-i', fileName, '-c:v', 'libx265', '-crf', constantRateFactor, '-c:a', audioCodec, '-b:a', '128k', '-preset', presetSpeed, `${outputDirName}/${targetFilename}`]);
+
+            // Run the command line synchronously
+            spawnSync('ffmpeg', ['-i', fileName, '-c:v', 'libx265', '-crf', constantRateFactor, '-c:a', audioCodec, '-b:a', '128k', '-preset', presetSpeed, `${outputDirName}/${targetFilename}`]);
 
             // Get the video informations
             const statsOriginal  = fs.statSync(fileName);
@@ -120,6 +120,7 @@ if (conversionCount === 0) {
     }
 } else {
     console.log(`${conversionCount} videos converted in ${parseHrtimeToSeconds(process.hrtime(globalStartTime))} seconds.`); //TODO pluralize that string
+    console.log(`Commande line used: \`ffmpeg -i <fileName> -c:v libx265 -crf ${constantRateFactor} -c:a ${audioCodec} -b:a 128k ${outputDirName}/<targetFilename>\``);
 }
 
 // End of the script
