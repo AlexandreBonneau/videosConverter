@@ -1,0 +1,25 @@
+{
+  "name": "videos-converter",
+  "version": "0.1.0",
+  "description": "Converts videos made by your phone into x265 ones",
+  "main": "src/videosConverter.js",
+  "author": {
+    "name": "Alexandre Bonneau",
+    "email": "alexandre.bonneau@linuxfr.eu"
+  },
+  "readmeFilename": "README.md",
+  "license": "GPLv3",
+  "private": false,
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^5.5.0"
+  },
+  "repository": "https://gitlab.com/AnotherLinuxUser/videosConverter",
+  "bugs": {
+    "url": "https://gitlab.com/AnotherLinuxUser/videosConverter/issues"
+  },
+  "scripts": {
+    "lint": "eslint --ext .js src",
+    "lintfix": "eslint --fix --ext .js src"
+  }
+}
