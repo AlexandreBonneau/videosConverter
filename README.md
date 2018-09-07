@@ -21,7 +21,8 @@ nodejs src/videosConverter.js /path/to/phone/CameraDir /path/output/dir
 I tested the script on 329 files totalling 74GB, and it converted those into a 14GB size directory.<br>
 In average, converting your 1080p 60fps phone videos will get you a **80%** compression rate!
 
-*You can see the conversion log [here](https://gist.github.com/AlexandreBonneau/dddd33044f21e2078fe3d379804fdc52).* 
+*Note: To give you an idea, it tooks approximatively 115 hours to finish on my 6 years old i3-2105 with 8GB RAM.<br>
+You can see the conversion log [here](https://gist.github.com/AlexandreBonneau/dddd33044f21e2078fe3d379804fdc52).* 
 
 ### Caveat
 
@@ -29,7 +30,7 @@ It takes time and lots of CPU cycles to convert videos ; use a multiprocessor CP
 
 ### License
 
-videosConverter is a [GPLv3](https://www.gnu.org/licenses/#GPL)-licensed open source project.
+`videosConverter` is a [GPLv3](https://www.gnu.org/licenses/#GPL)-licensed open source project.
  
 ****
  
