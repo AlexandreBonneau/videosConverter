@@ -41,7 +41,7 @@ It takes time and lots of CPU cycles to convert videos ; use a multiprocessor CP
  
 ****
  
-If you find this code useful, feel free to make donation to support its development [![Donate][patreon-image]][patreon-url].
+If you find this code useful, feel free to make a donation to support its development [![Donate][patreon-image]][patreon-url].
 
 [patreon-url]: https://www.patreon.com/AlexandreBonneau
 [patreon-image]: https://img.shields.io/badge/patreon-donate-orange.svg
