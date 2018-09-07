@@ -23,3 +23,5 @@ test/unit/coverage
 
 # Other files you do not want to upload when publishing to npmjs
 .*
+misc
+tmp
