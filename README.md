@@ -16,6 +16,13 @@ The conversion subsequently returns **much** smaller files for the same quality.
 nodejs src/videosConverter.js /path/to/phone/CameraDir /path/output/dir
 ```
 
+#### Dependencies
+
+`videosConverter` makes extensive use of `ffmpeg` and the x265 library.<br>
+Hence, you need to install those dependencies firsthand, on Debian-based systems for instance, use:
+- `apt install ffmpeg`
+- `apt install $(apt-cache search libx265 |grep -v 'dev\|doc' | cut -f1 -d' ')` *# This should return `libx265-160` at the time of writing*
+
 ### Conversion ratio
 
 I tested the script on 329 files totalling 74GB, and it converted those into a 14GB size directory.<br>
