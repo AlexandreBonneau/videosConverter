@@ -1,6 +1,6 @@
 {
   "name": "videos-converter",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Converts videos made by your phone into x265 ones",
   "main": "src/videosConverter.js",
   "author": {
@@ -8,6 +8,15 @@
     "email": "alexandre.bonneau@linuxfr.eu"
   },
   "readmeFilename": "README.md",
+  "keywords": [
+    "video",
+    "videos",
+    "convert",
+    "converter",
+    "mp5",
+    "hevc",
+    "x265"
+  ],
   "license": "GPLv3",
   "private": false,
   "dependencies": {},

@@ -1,8 +1,8 @@
 /**
  *             videosConverter
  *
- * @version    0.1.1
- * @date       2018-08-24
+ * @version    0.1.2
+ * @date       2018-09-06
  *
  * @author     Alexandre Bonneau
  * @summary    Converts videos made by your phone into x265 ones
