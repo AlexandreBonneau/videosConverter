@@ -120,7 +120,7 @@ if (conversionCount === 0) {
     }
 } else {
     console.log(`${conversionCount} videos converted in ${parseHrtimeToSeconds(process.hrtime(globalStartTime))} seconds.`); //TODO pluralize that string
-    console.log(`Commande line used: \`ffmpeg -i <fileName> -c:v libx265 -crf ${constantRateFactor} -c:a ${audioCodec} -b:a 128k ${outputDirName}/<targetFilename>\``);
+    console.log(`Command line used: \`ffmpeg -i <fileName> -c:v libx265 -crf ${constantRateFactor} -c:a ${audioCodec} -b:a 128k ${outputDirName}/<targetFilename>\``);
 }
 
 // End of the script
@@ -135,8 +135,7 @@ function convertBytesToMegaBytes(bytes) {
 }
 
 function parseHrtimeToSeconds(hrtime) {
-    const seconds = (hrtime[0] + (hrtime[1] / 1e9)).toFixed(3);
-    return seconds;
+    return (hrtime[0] + (hrtime[1] / 1e9)).toFixed(3);
 }
 
 function selectOutputDir(outputDir, defaultOutputDirName) {
